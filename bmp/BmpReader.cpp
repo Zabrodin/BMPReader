@@ -40,7 +40,13 @@ uint64_t BmpReader::width  (void){
     return _bitMapInfoHeader.biWidth;
 }
 
-uint8_t BmpReader::pixel565 (int xPosition, int yPosition){
-    _fileReader->seek(_bitMapFileHeader.bfOffBits + _bitMapInfoHeader.biWidth * yPosition + xPosition);
-    return _fileReader->read();
+uint16_t BmpReader::pixel565 (int xPosition, int yPosition){
+    uint16_t pixel;
+    uint8_t* byte = (uint8_t*) &pixel;
+    if (_fileReader->seek(_bitMapFileHeader.bfOffBits + _bitMapInfoHeader.biWidth * yPosition * sizeof(pixel) + xPosition * sizeof(pixel))) {
+        byte[0] = _fileReader->read();
+        byte[1] = _fileReader->read();
+    }
+    
+    return pixel;
 }

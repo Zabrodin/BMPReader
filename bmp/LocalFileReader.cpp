@@ -8,7 +8,7 @@
 
 #include "LocalFileReader.h"
 
-LocalFileReader::LocalFileReader(const char *filename, uint8_t* data, int dataSize) : FileReader(filename){
+LocalFileReader::LocalFileReader(const char *filename, uint8_t* data, uint16_t dataSize) : FileReader(filename){
     
     _data = data;
     _dataSize = dataSize;
@@ -30,7 +30,7 @@ int LocalFileReader::available(){
 };
 
 bool LocalFileReader::seek(uint32_t pos){
-    if (pos<_dataSize) {
+    if (pos < _dataSize) {
         _position = pos;
         return 1;
     }

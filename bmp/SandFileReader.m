@@ -32,7 +32,7 @@
     return (uint8_t *)_data.bytes;
 }
 
--(int)dataSize
+-(NSUInteger)dataSize
 {
     return _data.length;
 }

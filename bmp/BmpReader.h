@@ -47,7 +47,7 @@ public:
     BmpReader(FileReader* fileReader);
     uint64_t height (void);
     uint64_t width  (void);
-    uint8_t pixel565 (int xPosition, int yPosition);
+    uint16_t pixel565 (int xPosition, int yPosition);
 };
 
 #endif /* defined(__bmp__BmpReader__) */

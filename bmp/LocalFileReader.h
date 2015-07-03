@@ -15,10 +15,10 @@
 class LocalFileReader : public  FileReader{
 private:
     uint8_t* _data;
-    int      _dataSize;
+    uint32_t _dataSize;
     uint32_t _position;
 public:
-    LocalFileReader(const char *filename, uint8_t* data, int dataSize);
+    LocalFileReader(const char *filename, uint8_t* data, uint16_t dataSize);
     uint8_t read();
     uint8_t peek();
     int available();

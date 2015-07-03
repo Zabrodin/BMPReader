@@ -12,10 +12,10 @@
 {
     NSString*   _fileName;
     NSData*     _data;
-    int         _size;
+    uint32_t    _size;
 }
 @property(readonly)NSString*    fileName;
 @property(readonly)uint8_t*     data;
-@property(readonly)int          dataSize;
+@property(readonly)NSUInteger   dataSize;
 -(instancetype)initWithFileName:(NSString*) fileName;
 @end
