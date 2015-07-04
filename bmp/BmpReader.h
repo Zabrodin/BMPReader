@@ -27,14 +27,14 @@ typedef struct
 typedef struct
 {
     uint32_t   biSize;
-    uint64_t   biWidth;
-    uint64_t   biHeight;
+    uint32_t   biWidth;
+    uint32_t   biHeight;
     uint16_t   biPlanes;
     uint16_t   biBitCount;
     uint32_t   biCompression;
     uint32_t   biSizeImage;
-    uint64_t   biXPelsPerMeter;
-    uint64_t   biYPelsPerMeter;
+    uint32_t   biXPelsPerMeter;
+    uint32_t   biYPelsPerMeter;
     uint32_t   biClrUsed;
     uint32_t   biClrImportant;
 } BitMapInfoHeader;

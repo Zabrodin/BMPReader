@@ -23,11 +23,16 @@
     self.title = @"Main";
     self.view.backgroundColor = [UIColor yellowColor];
     
-    SandFileReader* sandFileReader = [[SandFileReader alloc]initWithFileName:@"4pixel2.bmp"];
-    LocalFileReader* localFileReader = new LocalFileReader("4pixel2.bmp", sandFileReader.data, sandFileReader.dataSize);
+    NSString* fileName = @"4pixel2.bmp";
+    SandFileReader* sandFileReader = [[SandFileReader alloc]initWithFileName:fileName];
+    LocalFileReader* localFileReader = new LocalFileReader(fileName.fileSystemRepresentation, sandFileReader.data, sandFileReader.dataSize);
     BmpReader* bmpReader = new BmpReader(localFileReader);
     NSLog(@"with: %llu, height: %llu",bmpReader->width(), bmpReader->height());
-    NSLog(@"%d, %d, %d, %d", bmpReader->pixel565(0, 0), bmpReader->pixel565(1, 0), bmpReader->pixel565(0, 1), bmpReader->pixel565(1, 1));
+    NSLog(@"%0xb, %0xd, %0xd, %0xd", bmpReader->pixel565(0, 0), bmpReader->pixel565(1, 0), bmpReader->pixel565(0, 1), bmpReader->pixel565(1, 1));
+
+//  0x001f - Blue
+//  0x07e0 - Green
+//  0xf800 - Red
 }
 
 @end
