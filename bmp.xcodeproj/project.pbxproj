@@ -15,6 +15,7 @@
 		862DE4B91B42C12E00CE4A6B /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 862DE4B71B42C12E00CE4A6B /* FileReader.cpp */; };
 		862DE4BC1B42C97E00CE4A6B /* LocalFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 862DE4BA1B42C97E00CE4A6B /* LocalFileReader.cpp */; };
 		862DE4BF1B42CC2A00CE4A6B /* SandFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 862DE4BE1B42CC2A00CE4A6B /* SandFileReader.m */; };
+		D7EB2C421B48898B003AFEA1 /* SDBmpReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7EB2C401B48898B003AFEA1 /* SDBmpReader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		862DE4BB1B42C97E00CE4A6B /* LocalFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFileReader.h; sourceTree = "<group>"; };
 		862DE4BD1B42CC2A00CE4A6B /* SandFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandFileReader.h; sourceTree = "<group>"; };
 		862DE4BE1B42CC2A00CE4A6B /* SandFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandFileReader.m; sourceTree = "<group>"; };
+		D7EB2C401B48898B003AFEA1 /* SDBmpReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SDBmpReader.cpp; sourceTree = "<group>"; };
+		D7EB2C411B48898B003AFEA1 /* SDBmpReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBmpReader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				862DE4B71B42C12E00CE4A6B /* FileReader.cpp */,
 				862DE4BB1B42C97E00CE4A6B /* LocalFileReader.h */,
 				862DE4BA1B42C97E00CE4A6B /* LocalFileReader.cpp */,
+				D7EB2C411B48898B003AFEA1 /* SDBmpReader.h */,
+				D7EB2C401B48898B003AFEA1 /* SDBmpReader.cpp */,
 			);
 			name = cpp;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				862DE4B61B42BC3E00CE4A6B /* BmpReader.cpp in Sources */,
+				D7EB2C421B48898B003AFEA1 /* SDBmpReader.cpp in Sources */,
 				862DE48B1B42B5A200CE4A6B /* MainViewController.mm in Sources */,
 				862DE4881B42B5A200CE4A6B /* AppDelegate.m in Sources */,
 				862DE4851B42B5A200CE4A6B /* main.m in Sources */,
@@ -419,6 +425,7 @@
 				862DE4A41B42B5A200CE4A6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		862DE4A51B42B5A200CE4A6B /* Build configuration list for PBXNativeTarget "bmpTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +434,7 @@
 				862DE4A71B42B5A200CE4A6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

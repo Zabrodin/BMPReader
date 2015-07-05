@@ -30,18 +30,18 @@ BmpReader::BmpReader(FileReader* fileReader){
 }
 
 
-uint64_t BmpReader::height (void){
+uint32_t BmpReader::height (void){
     return _bitMapInfoHeader.biHeight;
 }
 
-uint64_t BmpReader::width  (void){
+uint32_t BmpReader::width  (void){
     return _bitMapInfoHeader.biWidth;
 }
 
 uint16_t BmpReader::pixel565 (int xPosition, int yPosition){
     uint16_t pixel;
     uint8_t* byte = (uint8_t*) &pixel;
-    if (_fileReader->seek(_bitMapFileHeader.bfOffBits + _bitMapInfoHeader.biWidth * yPosition * sizeof(pixel) + xPosition * sizeof(pixel))) {
+    if (_fileReader->seek(_bitMapFileHeader.bfOffBits + _bitMapInfoHeader.biWidth * (height() - 1 - yPosition) * sizeof(pixel) + xPosition * sizeof(pixel))) {
         byte[0] = _fileReader->read();
         byte[1] = _fileReader->read();
     }
