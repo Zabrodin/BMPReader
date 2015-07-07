@@ -15,9 +15,6 @@
 
 class SDBmpReader : public  FileReader{
 private:
-    uint8_t* _data;
-    uint32_t _dataSize;
-    uint32_t _position;
     File*   _file;
 public:
     SDBmpReader(const char *filename, File* file);

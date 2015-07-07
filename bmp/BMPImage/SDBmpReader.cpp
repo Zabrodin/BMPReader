@@ -14,26 +14,23 @@ SDBmpReader::SDBmpReader(const char *filename, File* file) : FileReader(filename
 }
 
 uint8_t SDBmpReader::read(){
-//    uint8_t byte = _file.read();
-    return 0;
+    uint8_t byteData = _file->read();
+    return byteData;
 };
 
 uint8_t SDBmpReader::peek(){
-    return _data[_position];
+    uint8_t byteData = _file->peek();
+    return byteData;
 };
 
 int SDBmpReader::available(){
-    return _position < _dataSize;
+    return _file->available();
 };
 
 bool SDBmpReader::seek(uint32_t pos){
-    if (pos < _dataSize) {
-        _position = pos;
-        return 1;
-    }
-    return 0;
+    return _file->seek(pos);
 };
 
 uint32_t SDBmpReader::position(){
-    return _position;
+    return _file->position();
 };
